@@ -1,0 +1,12 @@
+ app = "my-fastapi-app" # Replace with your actual Fly.io app name
+primary_region = "bom" # Set to Mumbai, India
+
+[build]
+  builder = "heroku/buildpacks:20" # This is fine for a Python app, but you can also leave this out to let Fly auto-detect.
+
+[env]
+  PORT = "8000" # This is the port your FastAPI app will run on.
+
+[deploy]
+  release_command = "echo 'Deploying...'" # You can specify a command to run after deployment if needed.
+
